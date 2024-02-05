@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:background="@color/bg_color"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="48dp"
+        android:paddingBottom="54dp"
+        >
+
+        <ImageView
+            android:id="@+id/onboardchecklist_image"
+            android:layout_width="165dp"
+            android:layout_height="153dp"
+            android:src="@drawable/onboarding_checklist"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="96dp"
+            android:layout_marginRight="96dp"
+            />
+
+        <TextView
+            android:id="@+id/onboardchecklist_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/onboardchecklist_image"
+            android:layout_marginTop="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:text="What else can we do?"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/checkmark1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onboardchecklist_title"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/onboarding_checkmark"
+                 />
+
+            <TextView
+                android:layout_width="256dp"
+                android:layout_height="24dp"
+                android:text="  Check food interactions "
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="109dp"
+                tools:layout_editor_absoluteY="358dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/onboardchecklist_text1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Check food to drug interactions by inputting the ingredients"
+            app:layout_constraintTop_toBottomOf="@+id/checkmark1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="@+id/checkmark1"
+            app:layout_constraintRight_toRightOf="@+id/checkmark1"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/checkmark2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onboardchecklist_text1"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/onboarding_checkmark"
+                />
+
+            <TextView
+                android:layout_width="256dp"
+                android:layout_height="24dp"
+                android:text="  Gain new knowledge"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="109dp"
+                tools:layout_editor_absoluteY="358dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/onboardchecklist_text2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Learn more about common interactions and health facts"
+            app:layout_constraintTop_toBottomOf="@+id/checkmark2"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="@+id/checkmark2"
+            app:layout_constraintRight_toRightOf="@+id/checkmark2"
+            />
+
+        <LinearLayout
+            android:id="@+id/checkmark3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onboardchecklist_text2"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/onboarding_checkmark"
+                />
+
+            <TextView
+                android:layout_width="256dp"
+                android:layout_height="24dp"
+                android:text="  Maintain a drug list"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="109dp"
+                tools:layout_editor_absoluteY="358dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/onboardchecklist_text3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Keep a coherent list to show your doctor at the time of visit"
+            app:layout_constraintTop_toBottomOf="@+id/checkmark3"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/checkmark3"
+            app:layout_constraintRight_toRightOf="@+id/checkmark3"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ready_togo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/theme_color_bg"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/onboardchecklist_text3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="Ready to Go!"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

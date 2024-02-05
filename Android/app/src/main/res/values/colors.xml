@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#555555</color>
+    <color name="grey1">#33555555</color>
+    <color name="bg_color">#EFF2FC</color>
+    <color name="theme_color">#2949CD</color>
+    <color name="transparent">#00000000</color>
+    <color name="orange">#FFE8C6</color>
+    <color name="red">#D33525</color>
+    <color name="possibility_30_70">#F9B043</color>
+    <color name="possibility_30">#00DF16</color>
+    <color name="possibility_curve">#DEE4EA</color>
+    <color name="light_orange">#F56D41</color>
+    <color name="drug_list_interaction_green">#478433</color>
+    <color name="transparent_theme_color">#002949CD</color>
+
+</resources>

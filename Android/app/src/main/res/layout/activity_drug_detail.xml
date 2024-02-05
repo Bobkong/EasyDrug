@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/drug_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="24dp"
+                android:paddingBottom="24dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/white_bg">
+
+                <TextView
+                    android:id="@+id/drug_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/theme_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:paddingRight="110dp"/>
+
+<!--                <TextView-->
+<!--                    android:id="@+id/drug_scale"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/drug_name"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textColor="@color/grey"-->
+<!--                    android:text="500 mg"/>-->
+
+                <ImageView
+                    android:id="@+id/drug_image"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/drug_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/drug_header"
+                android:background="@drawable/white_bg">
+
+                <TextView
+                    android:id="@+id/description_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="@color/theme_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:id="@+id/description_speaker"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/speaker"
+                    app:layout_constraintTop_toTopOf="@+id/description_title"
+                    app:layout_constraintBottom_toBottomOf="@+id/description_title"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <com.example.easydrug.widget.ExpandTextView
+                    android:id="@+id/description_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/description_title"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/drug_interaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/drug_desc"
+                android:background="@drawable/white_bg">
+
+                <TextView
+                    android:id="@+id/drug_interaction_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Drug Interactions"
+                    android:textColor="@color/theme_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:id="@+id/drug_interaction_speaker"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/speaker"
+                    app:layout_constraintTop_toTopOf="@+id/drug_interaction_title"
+                    app:layout_constraintBottom_toBottomOf="@+id/drug_interaction_title"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/drug_interaction_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/drug_interaction_title" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/no_interaction_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/drug_interaction_title">
+
+                    <ImageView
+                        android:id="@+id/no_interaction_img"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/dialog_correct"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginTop="24dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/no_interaction_img"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:text="@string/interaction_not_detected"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginTop="16dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/no_drug_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/drug_interaction_title">
+
+                    <ImageView
+                        android:id="@+id/no_drug_image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/no_drug_image"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginTop="24dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/no_drug_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/no_drug_image"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:text="@string/interaction_no_drug"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/no_drug_add_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/no_drug_desc"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:text="Add to list"
+                        android:textColor="@color/theme_color"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginTop="8dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/loading_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/drug_interaction_title">
+
+                    <ImageView
+                        android:id="@+id/loading_image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/loading_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginTop="24dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="250dp"
+                        android:gravity="center_horizontal"
+                        app:layout_constraintTop_toBottomOf="@+id/loading_image"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:text="@string/interaction_loading"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:layout_marginTop="16dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/loading_error_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/drug_interaction_title">
+
+                    <ImageView
+                        android:id="@+id/error_image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/dialog_error"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginTop="24dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/loading_error_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="250dp"
+                        android:gravity="center_horizontal"
+                        app:layout_constraintTop_toBottomOf="@+id/error_image"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:text="@string/interaction_load_error"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/refresh"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/loading_error_text"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/theme_color_stroke_bg"
+                        android:text="Refresh"
+                        android:textColor="@color/theme_color"
+                        android:textSize="18sp"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/side_effect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="24dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/drug_interaction"
+                android:background="@drawable/white_bg">
+
+                <TextView
+                    android:id="@+id/side_effect_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Side Effects"
+                    android:textColor="@color/theme_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:id="@+id/side_effect_definition"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/definition_icon"
+                    app:layout_constraintTop_toTopOf="@+id/side_effect_title"
+                    app:layout_constraintBottom_toBottomOf="@+id/side_effect_title"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <TextView
+                    android:id="@+id/side_effect_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/side_effect_title"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/disclaimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/side_effect"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                android:textSize="18sp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/add_to_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="48dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:background="@drawable/theme_color_bg"
+                app:layout_constraintTop_toBottomOf="@id/disclaimer">
+
+                <TextView
+                    android:id="@+id/add_to_list_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="Add to List"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bg_color"
+        tools:ignore="MissingConstraints" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Drug Description"/>
+
+        <ImageView
+            android:id="@+id/add_to_list_top"
+            android:layout_width="28dp"
+            android:layout_height="22dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/add_list"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

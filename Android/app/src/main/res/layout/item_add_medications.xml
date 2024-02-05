@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:paddingBottom="32dp">
+
+    <TextView
+        android:id="@+id/add_medications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:includeFontPadding="false"
+        android:text="Add Medications"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/theme_color_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

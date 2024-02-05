@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MatchMatch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <declare-styleable name="RoundRectImageView">
+        <attr name="radius" format="dimension"/>
+    </declare-styleable>
+
+    <style name = "AppTheme" parent = "Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/bg_color</item>
+    </style>
+
+    <style name = "NoActionBar" parent = "@style/AppTheme">
+        <item name = "android:windowActionBar">false</item>
+        <item name = "android:windowNoTitle">true</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+    </style>
+
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+</resources>

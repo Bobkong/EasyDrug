@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">EasyMed</string>
+    <string name="home_feedback_title">Enjoying our app so far? Let us know your feedback!</string>
+    <string name="tap_here_to_edit_info">Tap here to edit info</string>
+    <string name="disclaimer">*Disclaimer: These results are only a guideline. Check with your healthcare provider to determine if any adjustments to your medications are needed.</string>
+    <string name="possibilities_string">Possibilities</string>
+    <string name="go_to_record_text">Press to Record Food Ingredients</string>
+    <string name="go_to_pause_text">Press to Stop Recording</string>
+    <string name="speech_food_check1_title">Record Slowly</string>
+    <string name="speech_food_check1_text">Stop for 0.5–1s between each ingredient</string>
+    <string name="speech_food_check2_text">“E.g: Cheese, bacon, egg, red pepper, flour, tomato, basil”</string>
+    <string name="speech_food_check2_title">Only say food ingredients</string>
+    <string name="log_out_title">Are you sure you want to Log Out of the app?</string>
+    <string name="interaction_load_error">Cant\' load drug interactions</string>
+    <string name="interaction_loading">Loading drug interactions, please wait!</string>
+    <string name="interaction_no_drug">No drugs in list</string>
+    <string name="interaction_not_detected">No interactions detected!</string>
+    <string name="view_drug_list">View drug list</string>
+</resources>
